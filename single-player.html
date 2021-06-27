@@ -1,12 +1,151 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Single Player</title>
+    <meta charset="utf-8">
+    <!----Load bootstrap library for font styles and access to font awesome icons (used this for home icon) --->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    <title>my site</title>
+    <link rel="stylesheet" type="text/css" href="styles/styling.css">
+
+    <nav>
+        <ul class="navbar">
+            <li><button><a href="multi-player.html"><b>Multi Player</b></a></button></li>
+            <li><a href="index.html"><i class="fa fa-home"></i> </a></li>
+            <li><button><a href="single-player.html">
+                        <b>Single player</b></a>
+                </button>
+            </li>
+
+
+
+
+
+
+        </ul>
+    </nav>
+    <h3 align="center">Single Player</h3>
+
 </head>
+
 <body>
-  
+    <form>
+        <center>
+            <!----Fieldset is a type of card --->
+            <fieldset>
+                <!----Align everything inside in the center --->
+                <center>
+
+                    <!----Start the tic tac toe board by making a three by three grid with rows. Cell index will be used later for functionality... --->
+                    <table id="board">
+                        <tr class="row">
+                            <td id="cell" cell-index="0"></td>
+                            <td id="cell" cell-index="1"></td>
+                            <td id="cell" cell-index="2"></td>
+                        </tr>
+
+                        <tr class="row">
+                            <td id="cell" cell-index="3"></td>
+                            <td id="cell" cell-index="4"></td>
+                            <td id="cell" cell-index="5"></td>
+                        </tr>
+
+                        <tr class="row">
+                            <td id="cell" cell-index="6"></td>
+                            <td id="cell" cell-index="7"></td>
+                            <td id="cell" cell-index="8"></td>
+                        </tr>
+
+                    </table>
+
+
+                    </div>
+
+                    <!----Create the buttons and only enable the start one--->
+                    <p>
+                        <button>Start</button>
+                        <button disabled>Reset</button>
+                        <button disabled>Replay</button>
+                    </p>
+
+
+
+
+
+
+
+                </center>
+
+        </center>
+
+    </form>
+    <footer>
+        <p>
+        <h6><br>Contact: (012)-345-6789 | Copyright © 2021 Shadman Ahmed. All rights reserved. </h6>
+
+        </p>
+    </footer>
+
+    <!----Style the footer with the style tag. Center it, shift it down, and make text black --->
+    <!----Next style the card that the tic tac toe board will be in. Resize it, give it a color animation, box shadow, center the items inside and add horizontal/vertical padding  --->
+    <!----Last, create the color animation for the fieldset--->
+    <style>
+        footer {
+            text-align: center;
+            color: #000000;
+            margin-top: 170%;
+        }
+
+
+        fieldset {
+            animation: primaryColors 25s infinite;
+            top: 80px;
+            display: inline-grid;
+            justify-content: center;
+            align-items: center;
+            background: black;
+            border-radius: 5px;
+            width: 100%;
+            min-width: 600px;
+            max-width: 600px;
+            padding: 60px 10px;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            box-shadow: 55px 56px 55px -20px #131212;
+
+        }
+
+        @keyframes primaryColors {
+            0% {
+                background: #00BCD4;
+            }
+
+            25% {
+                background: #1e00C8;
+            }
+
+            50% {
+                background: #662828;
+            }
+
+            75% {
+                background: #12D400;
+            }
+
+            100% {
+                background: #8ea027;
+            }
+        }
+    </style>
+
+
+
+
+
 </body>
+
 </html>
