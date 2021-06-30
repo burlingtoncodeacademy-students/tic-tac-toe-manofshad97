@@ -3,87 +3,50 @@
 
 <head>
   <meta charset="utf-8">
-  <!----Load bootstrap library for font styles and access to font awesome icons (used this for home icon) --->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
   <title>Tic Tac Toe</title>
   <link rel="stylesheet" type="text/css" href="styles/styling.css">
-  <nav>
-    <!----Create a navbar with items set as list items with links to the different pages --->
-    <ul class="navbar">
-      <li><button><a href="multi-player.html"><b>Multi Player</b></a></button></li>
-      <li><a href="index.html"><i class="fa fa-home"></i> </a></li>
-      <li><button><a href="single-player.html">
-            <b>Single player</b></a>
-        </button>
-      </li>
-
-
-
-
-
-
-    </ul>
-  </nav>
-  <!----Main title on homepage--->
-  <h1 align="center">Tic Tac Toe Game</h1>
-
 
 </head>
 
 <body>
+  <!----Create a navbar using the nav tag, with items set as list items with links to the different pages --->
+  <nav>
+    <ul class="navbar">
+      <li><button><a href="multi-player.html"><b>Multi Player</b></a></button></li>
+      <li><a href="index.html">Home </a></li>
+      <li><button><a href="single-player.html">
+            <b>Single player</b></a>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!----Main title on homepage--->
+  <h1>Tic Tac Toe Game</h1>
   
-<center>
-  <!----Fieldset is a type of card --->
-  <fieldset>
-    <!----Align everything inside in the center with the center tag. Create two fieldsets. One with a singpleayer pic, the other with a multiplayer pic --->
-    <center>
-      <a href="single-player.html">
-        <img src="images/singular.jpg" alt="Avatar">
-        <h6 align="center">Single Player</h6>
-
-
-
-      </a>
-    </center>
-  </fieldset>
-
-  <fieldset>
-    <center><a href="multi-player.html">
-      <img src="images/multi.jpg" alt="Avatar">
-      <h6 align="center">Multi Player</h6>
-
-
-
+  <div id="images">
+    <!----Within the image div, create two image tags inside of anchor tags (to link them to different pages) and place an h1 under each describing where the image links to. --->
+    <a href="multi-player.html">
+      <img class="pictures" src="images/multi.jpg" />
+      <h1>MultiPlayer</h1>
     </a>
-  </center>
-  </fieldset>
-</center>
 
+    <a href="single-player.html">
+      <img class="pictures" src="images/singular.jpg" />
+      <h1>SinglePlayer</h1>
+    </a>
 
-
-<!----Create the video iframe by placing it in its own div.--->
-<center>
-  <div class="youtube">
-    <h3 id = "desc" align="center">How to Always Win Tic Tac Toe</h3>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/OmC07DvEayY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
   </div>
 
-</center>
+  <!----Create an iframe using Youtube's embed code--->
+  <iframe src="https://www.youtube.com/embed/OmC07DvEayY" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
 
-
-<!----Footer--->
-<footer>
-  <p>
-  <h6><br> Contact: (012)-345-6789 | Copyright © 2021 Shadman Ahmed. All rights reserved. </h6>
-
-  </p>
-</footer>
-
-
-
-
+  <!----Footer--->
+  <footer>
+    <h6><br> Contact: (012)-345-6789 | Copyright © 2021 Shadman Ahmed. All rights reserved. </h6>
+  </footer>
 
 </body>
 
