@@ -10,7 +10,11 @@
 
 /*Make the actual tic tac toe grid visible by giving a border to each square/cell in the grid. */
 .cell{
-    border: 1px solid black
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 /*Define a new animation for changing colors. At different percentages of a set time (which will be set later) the background color will change*/
 /*Initially defined this animation later but needed it earlier in the page to use it in the body*/
@@ -76,6 +80,27 @@ footer{
 /*Increase the font size of the footer text, which is the only h6*/
 h6{
     font-size: 20px;
+}
+
+/*Style the popup wrapper. Make it the full width of the screen*/
+#popupWrapper{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.466);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+/*Give the popup a background color and shift it slightly below the tic tac toe grid*/
+.popup{
+    background-color: white;
+    margin-top: 25%;
+
 }
 
 /*Create an iframe with a certain size. Give it a margin on top to shift it a bit under the images div*/

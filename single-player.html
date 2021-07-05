@@ -41,15 +41,22 @@
 
     <!----Make a div that holds the start reset and replay buttons. Only the start button should be enabled.--->
     <div id="gameButtons">
-        <button>Start</button>
-        <button disabled>Reset</button>
+        <button id="startButt">Start</button>
+        <button id="resetButt" disabled>Reset</button>
         <button disabled>Replay</button>
     </div>
+
+    <!----Create h3s for the status(Whos turn it is), alertPop(Used for empty cell alert as well notifying who wins the game), and timer--->
+    <h3 id ="status"></h3>
+    <h3 id = "alertPop"></h3>
+    <h3 id = "timer"></h3>
 
     <!----Footer tag at the end of the page--->
     <footer>
         <h6><br>Contact: (012)-345-6789 | Copyright © 2021 Shadman Ahmed. All rights reserved. </h6>
     </footer>
+
+    <script src="singleplayer.js"></script>
 
 </body>
 

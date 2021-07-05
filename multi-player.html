@@ -25,6 +25,18 @@
     <!----H3 that displaus whether you're on the single player or multiplayer page--->
     <h3>Multi Player</h3>
 
+    <!----Create a wrapper for the popup prompting the user for names, using a div --->
+    <div id="popupWrapper">
+        <div class="popup">
+            <!----Have two input boxes for the name of the players--->
+            <input id="player1" type="text" placeholder="Player 1 Name"/>
+            <input id="player2" type="text" placeholder="Player 2 Name"/>
+            <!----Once the submit button is clicked, call the submitNames function--->
+            <button onclick="submitNames()">Submit</button>
+        </div>
+    </div>
+    
+
     <!----Create the div that will eventually turn into the tic tac toe grid after styling. Because the grid is 3x3, the board needs 9 other divs which reperesent the squares or cells within the grid--->
     <div id="board">
         <div class="cell"></div>
@@ -41,15 +53,22 @@
 
     <!----Make a div that holds the start reset and replay buttons. Only the start button should be enabled.--->
     <div id="gameButtons">
-        <button >Start</button>
-        <button disabled>Reset</button>
+        <button id="startButt">Start</button>
+        <button id="resetButt"disabled>Reset</button>
         <button disabled>Replay</button>
     </div>
+
+    <!----Create h3s for the status(Whos turn it is), alertPop(Used for empty cell alert as well notifying who wins the game), and timer--->
+    <h3 id ="status"></h3>
+    <h3 id = "alertPop"></h3>
+    <h3 id = "timer"></h3>
     
     <!----Footer tag at the end of the page--->
     <footer>
         <h6><br>Contact: (012)-345-6789 | Copyright © 2021 Shadman Ahmed. All rights reserved. </h6>
     </footer>
+
+    <script src="mutliplayer.js"></script>
 
 </body>
 
