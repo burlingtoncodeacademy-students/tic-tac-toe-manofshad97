@@ -190,7 +190,7 @@ function start() {
         player = "X"
         count = 0
         paused = true
-        timerText.textContent = "Time elapsed: 0:00"
+        timerText.textContent = "Time elapsed: 00:00:00"
     })
 }
 
@@ -205,7 +205,7 @@ function timer() {
             return;
         }
         //Convert count variable to milliseconds. Create a Date object with that timestamp and convert that object into a string using .toISOString(). Take the hours, minutes, and seconds out of that formatted string using .substr() (This works like slice but is for strings rather than arrays)
-        timerText.textContent = new Date(count * 1000).toISOString().substr(11, 8)
+        timerText.textContent = "Time elapsed: " + new Date(count * 1000).toISOString().substr(11, 8)
         //Increment count
         count++
     }
