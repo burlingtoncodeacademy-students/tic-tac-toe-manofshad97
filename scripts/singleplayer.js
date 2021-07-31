@@ -123,9 +123,9 @@ function cellClicked(evt) {
     status.textContent = `Human's turn`
     alertPop.textContent = ""
     //Check for a winner each time a cell is clicked and a value is drawn in that cell and set this to a variable "winner"
-    let winner = checkWinner()
+    let winnerCheck = checkWinner()
     //If there is no winner yet
-    if (!winner) {
+    if (!winnerCheck) {
         //Get an array of all empty cells by filtering with cells that contain an empty string
         let emptyCells = boardCellsArray.filter((cell) => cell.textContent === "")
         //If there are no more empty cells, exit the function
@@ -144,7 +144,7 @@ function cellClicked(evt) {
             //Change processing to false since the computer's turn is complete and update the status to Human's turn. Check for a winner again since a cell was clicked and drawn in
             processing = false
             status.textContent = "Human's turn"
-            winner = checkWinner()
+            winnerCheck = checkWinner()
         }, 300)
     }
 }
