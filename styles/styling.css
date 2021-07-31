@@ -1,0 +1,120 @@
+/*Turn the board into grid. Give it a size with height and width. Make it 3x3 and even with repeat(). Add a border to the grid. */
+#board{
+    display: grid;
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+/*Make the actual tic tac toe grid visible by giving a border to each square/cell in the grid. */
+.cell{
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+/*Define a new animation for changing colors. At different percentages of a set time (which will be set later) the background color will change*/
+/*Initially defined this animation later but needed it earlier in the page to use it in the body*/
+@keyframes colorAnimation {
+    0% {background: #00BCD4; }
+    25% {background: #00C853; }
+    50% {background: #C62828; }
+    75% {background: #4527A0; }
+    100% {background: #00BCD4; }
+    
+}
+
+
+/*Make the body a flexbox so that everything can be centered inside with align-items. Give it the colorAnimation, set the time to 25 seconds, and make sure it goes on infinitely*/
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: colorAnimation 25s infinite;
+
+}
+/*Remove the bullets from the navbar items. Make the navbar the full width of the screen. Make sure it is a flexbox so that justify-content can be applied and put spaces between the navbar items.*/
+.navbar{
+    list-style: none;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/*Had to give padding of 0 to the ul in the navbar as well as the list items themselves. Otherwise the items in the navbar would stretch off the edges of the screen.*/
+ul{
+    padding: 0;
+}
+
+
+li{
+    padding: 0;
+}
+
+/*Because the body has a position of relative, absolute can be applied to the footer which is in the body. Make the position absolute so it stays in place and move it to the bottom of the page*/
+footer{
+    position: absolute;
+    bottom: 0;
+    
+}
+
+/*Resize the pictures*/
+.pictures{
+    width: 150px;
+}
+
+/*This styles the images div that the pictures are in. Make the color gray, and give it a set size. Make it a flexbox so that alignitems and justify content can be applied. Center the images in the div and put a space around each image. */
+#images{
+    display: flex;
+    background-color: gray;
+    height: 300px;
+    width: 500px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/*Increase the font size of the footer text, which is the only h6*/
+h6{
+    font-size: 20px;
+}
+
+/*Style the popup wrapper. Make it the full width of the screen*/
+#popupWrapper{
+    display: none;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.466);
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+
+}
+
+/*Give the popup a background color and shift it slightly below the tic tac toe grid*/
+.popup{
+    background-color: white;
+    margin-top: 25%;
+
+}
+
+/*Create an iframe with a certain size. Give it a margin on top to shift it a bit under the images div*/
+iframe{
+    width: 560px; 
+    height: 315px;
+    margin-top: 20px;
+}
+
+/*Media query. If the site is viewed on a screen and the width of the screen is less than 500 pixels, resize the board.*/
+@media screen and (max-width: 500px){
+   #board{
+       height: 300px;
+       width: 300px;
+   } 
+}
+

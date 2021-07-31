@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
   <title>Tic Tac Toe</title>
+  <link rel="stylesheet" type="text/css" href="styles/styling.css">
+
 </head>
+
 <body>
+  <!----Create a navbar using the nav tag, with items set as list items with links to the different pages --->
+  <nav>
+    <ul class="navbar">
+      <li><button><a href="multi-player.html"><b>Multi Player</b></a></button></li>
+      <li><a href="index.html">Home </a></li>
+      <li><button><a href="single-player.html">
+            <b>Single player</b></a>
+        </button>
+      </li>
+    </ul>
+  </nav>
+
+  <!----Main title on homepage--->
+  <h1 id="mainTitle">Tic Tac Toe Game</h1>
   
+  <div id="images">
+    <!----Within the image div, create two image tags inside of anchor tags (to link them to different pages) and place an h1 under each describing where the image links to. --->
+    <a href="multi-player.html">
+      <img class="pictures" src="images/multi.jpg" />
+      <h1>MultiPlayer</h1>
+    </a>
+
+    <a href="single-player.html">
+      <img class="pictures" src="images/singular.jpg" />
+      <h1>SinglePlayer</h1>
+    </a>
+
+  </div>
+
+  <!----Create an iframe using Youtube's embed code--->
+  <iframe src="https://www.youtube.com/embed/OmC07DvEayY" title="YouTube video player" frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+
+  <!----Footer--->
+  <footer>
+    <h6><br> Contact: (012)-345-6789 | Copyright © 2021 Shadman Ahmed. All rights reserved. </h6>
+  </footer>
+
 </body>
+
 </html>
